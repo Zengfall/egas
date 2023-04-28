@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=_Roboto_:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900_&_display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=_Shrikhand_&_display=swap" rel="stylesheet">
+    <!--Ajout icones-->
+    <script src="https://kit.fontawesome.com/61e67503e4.js" crossorigin="anonymous"></script>
+    
+    
+
+    <title>Accueil</title>
+
+    
+</head>
+<body>
+<header>
+    <!--Logo cliquable -->
+    <div class="header__logo">
+        <div>
+            <!--Lien qui renvoie à l'accueil de la page-->
+            <a href="index.html"><img class="header__img" id="1" src="../Images/logo/LOGO_page-0001.webp" alt="logo Egas"></a>
+        </div>
+    </div>
+    <!--Menu-->
+    <nav>
+        <ul class="menu">
+            <li><a href="#accueil">ACCUEIL</a></li>
+            <li><a href="#apropos">À PROPOS</a></li>
+            <li><a href="#activites">ACTIVITES</a></li>
+            <li><a href="#realisations">REALISATIONS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!--Section Accueil-->
+    <section id="accueil">
+        <div class="presentation">
+            <h2>Notre mission</h2>
+            <p>Ici, vous pouvez écrire la mission de votre entreprise en détail.</p>
+        </div>
+        <div class="chevron">
+            <a href="#activites">
+                <i class="fa-solid-fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+    <!--Section À propos-->
+    <section id="apropos">
+        <div class="container">
+            <h2>A PROPOS</h2>
+            <div class="apropos__content">
+                <div class="apropos__text">
+                    <h3>Notre histoire</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia neque velit, at euismod dolor
+                        aliquam eget. Nulla hendrerit vel velit eu pretium. Sed aliquam justo et mauris eleifend interdum. Etiam
+                        eleifend auctor leo, nec accumsan est rhoncus id. Curabitur nec semper risus. Morbi tempor ante vel
+                        massa laoreet iaculis. Sed lacinia urna sit amet elit bibendum suscipit.</p>
+                    <p>Phasellus tincidunt aliquam tellus, vel dapibus mi lacinia vel. Aenean euismod tellus nisl, vitae
+                        eleifend leo commodo et. Nulla dapibus commodo eros vel rhoncus. Aliquam imperdiet enim vitae purus
+                        commodo consequat. Sed vestibulum lectus id magna dignissim, non commodo sapien venenatis. Pellentesque
+                        lobortis, velit in dapibus aliquam, ex nisl pulvinar leo, vitae sollicitudin mauris mauris et lacus.</p>
+                </div>
+                <div class="apropos__img">
+                    <img src="../Images/activites/Moi.jpg" alt="PDG EGAS">
+                    <p class="legend">PDG EGAS</p>
+                </div>
+            </div>
+    </section>
+    <!--Section Activités-->
+    <section id="activites">
+        <div class="container">
+            <h2 class="activites__title">ACTIVITES</h2>
+            <p class="activites__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia neque
+                velit, at euismod dolor aliquam eget. Nulla hendrerit vel velit eu pretium. Sed aliquam justo et mauris
+                eleifend interdum. Etiam eleifend auctor leo, nec accumsan est rhoncus id. Curabitur nec semper risus. Morbi
+                tempor ante vel massa laoreet iaculis. Sed lacinia urna sit amet elit bibendum suscipit.</p>
+            <div class="activites__bande">
+                <a href="projet.html#travaux-publics" class="activites__bande-item">
+                    <img src="../Images/icones/crane-truck.png" alt="Icone de camion benne" class="activites__bande-icon">
+                    <p class="activites__bande-texte">Travaux publics</p>
+                </a>
+                <a href="projet.html#batiments" class="activites__bande-item">
+                    <img src="../Images/icones/engineer.png" alt="Icone d'un homme ouvrier" class="activites__bande-icon">
+                    <p class="activites__bande-texte">Bâtiments</p>
+                </a>
+                <a href="projet.html#amenagement-agricole" class="activites__bande-item">
+                    <img src="../Images/icones/tractor.png" alt="Icone de tracteur" class="activites__bande-icon">
+                    <p class="activites__bande-texte">Aménagement agricole</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--Section Réalisations-->
+    <section id="realisations">
+        <div class="container">
+            <h2 class="realisations__title">REALISATIONS</h2>
+            <div class="realisations__bande">
+                <a href="realisations.html#station-aibd" class="realisations__bande-item">
+                    <img src="../Images/realisations/Shell-Logo-1995-1999.png" alt="logo Shell" class="realisations__bande-image">
+                    <span class="voir-plus text-center">Voir plus</span>
+                </a>
+                <a href="realisations.html#sanitaires-gco" class="realisations__bande-item">
+                    <img src="../Images/realisations/GCO.jpg" alt="logo GCO" class="realisations__bande-image">
+                    <span class="voir-plus text-center">Voir plus</span>
+                </a>
+                <a href="realisations.html#abatoire" class="realisations__bande-item">
+                    <img src="../Images/realisations/meckhe.png" alt="logo commune de Meckhe" class="realisations__bande-image">
+                    <span class="voir-plus text-center">Voir plus</span>
+                </a>
+            </div>
+            <div class="qse">
+                <img src="../Images/realisations/qse.jpg" alt="Image QSE" id="qse-image">
+            </div>
+            
+            <div class="qse-texte">
+                <!-- Ajoutez votre texte de politique QSE ici -->
+            </div>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                        const qseImage = document.getElementById("qse-image");
+                        const qseTexte = document.querySelector(".qse-texte");
+
+                        qseImage.addEventListener("click", () => {
+                            qseTexte.style.display = "block";
+                        });
+                    });
+
+            </script>
+
+        </div>
+    </section>
+    <!--Section Partenaires-->
+    <section id="partenaires">
+        <div class="container">
+            <h2 class="partenaires__title">ILS NOUS ONT FAIT CONFIANCE</h2>
+            <div class="partenaires__bande">
+                <a class="partenaires__bande-item">
+                    <img src="../Images/realisations/vivo-energy-logo.png" alt="logo Vivo" class="partenaires__bande-image"
+                        class="partenaires__bande-image">
+                </a>
+                <a class="partenaires__bande-item">
+                    <img src="../Images/realisations/cms.jpg" alt="logo CMS" class="partenaires__bande-image">
+                </a>
+                <a class="partenaires__bande-item">
+                    <img src="../Images/realisations/meridiam.jpg" alt="logo meridiam" class="partenaires__bande-image">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--Section Contact-->
+    <section id="contact">
+        
+            <h2>CONTACTS</h2>
+            <div class="left-column">
+                <h3>Nous contacter</h3>
+            <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" pattern="[A-Za-z]{2,}" required><br>
+                <!-- Le pattern '[A-Za-z]{2,}' signifie que l'entrée doit contenir des lettres (majuscules ou minuscules) et avoir une longueur minimale de 2 caractères. -->
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" pattern="^[a-zA-Z]+([ ]?[a-zA-Z]+)*$" required><br>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+                <!-- Le type 'email' est déjà validé par défaut par le navigateur, donc il n'est pas nécessaire d'utiliser une REGEX pour cette entrée. -->
+                
+                <label for="objet">Objet :</label>
+                <input type="text" id="objet" name="objet" required><br>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                
+                <input type="submit" value="Envoyer">
+
+            </form>
+            </div>
+            <div class="right-column">
+                <h3>Coordonnées</h3>
+                <h4>Siège social :</h4>
+                <p>Quartier Mbambara Derrière Ecole 1 <br>Meckhe</p>
+    
+                <h4>Téléphone :</h4>
+                <p>+221 33 954 65 11</p>
+    
+                <h4>Email :</h4>
+                <p>contact@egas.sn</p>
+                <h4>BP :</h4>
+                <p>56-Meckhe</p>
+    
+                <h4>Obtenez un devis :</h4>
+                <p> +221 77 410 52 31</p>
+            </div>
+    </section>
+    <a href="#" class="back-to-top"><img src="../Images/icones/icons8-flèche-haut-48.png"></a>
+    <script src="../script/index.js"></script>
+</main>
+<footer>
+    
+    <p>© EGAS 2023 - Tous droits réservés</p>
+</footer>
+</body>
+</html>
