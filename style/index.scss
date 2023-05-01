@@ -57,11 +57,15 @@ header {
     }
 }
 #accueil {
-    background-image: url('../Images/activites/josh-olalde-X1P1_EDNnok-unsplash.webp');
+    background-image: url('../Images/activites/WhatsApp Image 2023-04-30 at 01.53.16.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 600px;
+
     .presentation {
         background-color: rgba(255, 255, 255, 0.8);
-        padding:  90px;
+        padding: 90px;
         border-radius: 10px;
         margin: 50px auto;
         max-width: 600px;
@@ -309,8 +313,8 @@ header {
 
 }
 .qse-texte {
-    display: none;
-    position: absolute;
+    display:none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -320,10 +324,14 @@ header {
     color: white;
     font-size: 2rem;
     padding: 50px;
+    border: solid;
+    border-color: aqua;
 }
 
 .qse-texte p {
     margin-bottom: 20px;
+    text-align: left;
+    font-size: 24px;
 }
 #contact {
     h2 {
