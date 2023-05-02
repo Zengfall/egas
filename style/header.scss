@@ -1,0 +1,60 @@
+// Variables
+$header-height: 80px;
+$menu-item-height: 40px;
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0%;
+
+}
+
+// En-tête
+header {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    width: 100%;
+
+
+    // Logo
+    .header__logo {
+        img {
+            height: 60px;
+
+        }
+    }
+
+    // Menu
+    nav {
+        ul.menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                height: $menu-item-height;
+                margin: 0 30px;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    color: #333;
+                    text-decoration: none;
+                    font-size: 20px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
