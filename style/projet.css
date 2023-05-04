@@ -82,11 +82,14 @@ section .projets .carrousel {
   width: 30%;
   margin-right: 200px;
   position: relative;
+  height: 400px;
 }
 section .projets .carrousel img {
   width: 100%;
-  height: 100%;
-  margin-bottom: 40px;
+  height: 400px;
+  margin-top: -40px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 section .projets .carrousel .fa {
   position: absolute;
@@ -101,4 +104,65 @@ section .projets .carrousel .fa.left {
 }
 section .projets .carrousel .fa.right {
   right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  section h2 {
+    font-size: 2rem;
+    margin-left: 50px;
+    padding-right: 5%;
+  }
+  section .projets {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  section .projets .carrousel {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  section .projets .carrousel img {
+    height: 300px;
+    margin-top: 0;
+  }
+  section .projets .carrousel .fa {
+    font-size: 20px;
+  }
+  section .projets ul {
+    margin-right: 0;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 357px) {
+  section h2 {
+    margin-left: 10px;
+    font-size: 2rem;
+  }
+  section .projets {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  section .projets ul {
+    margin-right: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  section .projets .carrousel {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 250px;
+  }
+  section .projets .carrousel img {
+    height: 100%;
+    margin-top: 0;
+  }
+  section .projets .carrousel .fa {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=projet.css.map */
