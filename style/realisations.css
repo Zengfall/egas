@@ -40,6 +40,41 @@ header nav ul.menu li a:hover {
   text-decoration: underline;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle__bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px;
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: auto;
+  }
+  header .menu-toggle {
+    display: block;
+  }
+  header nav ul.menu li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 357px) {
+  .menu-toggle__bar {
+    height: 1px;
+  }
+  li {
+    display: none;
+  }
+}
 footer {
   background-color: #333;
   display: flex;

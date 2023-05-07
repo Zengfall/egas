@@ -1,3 +1,4 @@
+@import "../style/header.scss";
 // Variables
 $header-height: 80px;
 $menu-item-height: 40px;
@@ -7,61 +8,16 @@ body{
     margin: 0%;
 
 }
-// En-tête
-header {
-    height: $header-height;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
-    width: 100%;
-    
 
-    // Logo
-    .header__logo {
-        img {
-            height:  60px;
-           
-        }
-    }
-
-    // Menu
-    nav {
-        ul.menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                height: $menu-item-height;
-                margin: 0 30px;
-
-                a {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    color: #333;
-                    text-decoration: none;
-                    font-size: 20px;
-
-                    &:hover {
-                        text-decoration:underline;
-                    }
-                }
-            }
-        }
-    }
-}
 #accueil {
     background-image: url('../Images/activites/WhatsApp Image 2023-04-30 at 01.53.16.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 600px;
+    @media screen and (max-width: 357px){
+        background-image:url('../Images/activites/WhatsApp Image 2023-04-30 at 01.53.16.jpeg');
+    }
 
     .presentation {
         background-color: rgba(255, 255, 255, 0.8);
@@ -74,6 +30,9 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (max-width: 768px){
+            display: none;
+        }
     }
 }
 // Flèche de scroll
@@ -100,6 +59,9 @@ header {
         width: 12px;
         height: 12px;
     }
+        @media screen and (max-width: 768px){
+            display: none;
+        }
 }
 .fa-chevron-down {
     font-size: 40px;
@@ -128,7 +90,10 @@ header {
         margin-bottom: 30px;
         text-decoration: underline;
         margin-left: 40%;
-        
+        @media screen and (max-width: 357px){
+            text-align: center;
+            margin: 0%;
+        }
     
     }
 
@@ -136,12 +101,17 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+                text-align: center;
+            }
        
 
         .apropos__img {
             flex-basis: 30%;
             margin-bottom: 20px;
-
+            @media screen and (max-width: 768px) {
+                    display: none;
+                }
             img {
                 width: 80%;
                 margin-left: -10%;
@@ -154,12 +124,23 @@ header {
                 font-style: italic;
                 font-size: 0.8rem;
             }
+                        
         }
 
         .apropos__text {
             flex-basis: 45%;
             margin-left: 5%;
-
+            @media screen and (max-width: 768px) {
+                    margin-left: 30%;
+                }
+            @media screen and (max-width: 357px){
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 10;
+                -webkit-box-orient: vertical;
+                justify-content:space-between;
+            }
             h3 {
                 font-size: 1.8rem;
                 margin-bottom: 20px;
@@ -169,6 +150,9 @@ header {
                 font-size: 1rem;
                 line-height: 1.5;
                 margin-bottom: 20px;
+                @media screen and (max-width: 768px) {
+                        font-size: 24px;
+                    }
             }
         }
     }
@@ -231,6 +215,12 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
+        @media screen and (max-width: 357px) {
+            flex-direction: column;
+            margin-left: 40%;
+            width: 70%;
+
+        }
 
         &-item {
             display: flex;
@@ -239,10 +229,12 @@ header {
             width: calc(100% / 3);
             text-decoration: none;
             order:1;
-
+            @media screen and (max-width: 357px) {
+                margin-bottom: 20px;}
             .realisations__bande-image {
                 height: 150px;
                 margin-bottom: 10px;
+                object-fit: cover;
             }
                         .voir-plus { 
                             visibility: visible;
@@ -271,7 +263,9 @@ header {
     
     
 }
-
+.qse img{
+        width: 100%;
+}
 #partenaires {
     text-align: center;
     background-color: white;
@@ -285,6 +279,9 @@ header {
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
+        @media screen and (max-width: 357px){
+            flex-direction: column;
+        }
 
         &-item {
             display: flex;
@@ -292,10 +289,19 @@ header {
             align-items: center;
             width: calc(100% / 3);
             text-decoration: none;
+            @media screen and (max-width: 357px) {
+                   margin-left: 40%;
+                }
 
             .partenaires__bande-image {
                 height: 150px;
                 margin-bottom: 10px;
+                @media screen and (max-width: 357px) {
+                        .partenaires__bande-image {
+                            height: 100px;
+                            margin-bottom: 5px;
+                        }
+                    }
             }
 
             &:hover {
@@ -326,6 +332,10 @@ header {
     padding: 50px;
     border: solid;
     border-color: aqua;
+    @media screen and (max-width: 768px){
+        margin-left: -40px;
+    }
+    
 }
 
 .qse-texte p {
@@ -348,6 +358,9 @@ header {
         margin-left: 200px;
         vertical-align: top;
         display: inline-block;
+        @media screen and (max-width: 768px) {
+                display: none;
+            }
 
         h3 {
             font-size: 1.5rem;
@@ -396,22 +409,45 @@ header {
         vertical-align: top;
         display: inline-block;
         margin-left: 1px;
+        @media screen and (max-width: 768px) {
+                display:flex;
+                flex-direction: row;
+            }
+        @media screen and (max-width: 357px){
+            flex-direction: column;
+        }
 
         h3 {
             font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 20px;
+            @media screen and (max-width: 768px) {
+                    display: none;
+                }
         }
         h4{
             display: block;
             margin-bottom: 10px;
             font-size: 1.2rem;
             font-weight: bold;
+            @media screen and (max-width: 768px){
+                    font-size: 12px;
+                }
+            @media screen and (max-width: 768px){
+                    font-size: 24px;
+            }
         }
 
         p {
             margin: 10px 0;
             font-size: 1.1rem;
+            @media screen and (max-width: 768px){
+                    font-size: 10px;
+                    margin-top: 18px;
+                }
+            @media screen and (max-width: 768px){
+                    font-size: 18px;
+            }
 
             &:first-child {
                 margin-top: 0;
@@ -424,6 +460,12 @@ header {
     bottom: 20px;
     right: 20px;
     display: none;
+@media screen and (max-width: 357px){
+    display: none;
+    margin-left: 10%;
+    right: 40px;
+    visibility: hidden;
+}
 }
 
 .back-to-top:hover {

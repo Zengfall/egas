@@ -40,6 +40,14 @@ header nav ul.menu li a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    width: auto;
+  }
+  header nav ul.menu li a {
+    font-size: 12px;
+  }
+}
 footer {
   background-color: #333;
   display: flex;

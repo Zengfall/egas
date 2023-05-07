@@ -42,3 +42,17 @@ backToTopButton.addEventListener("click", backToTop);
 function backToTop() {
   window.scrollTo(0, 0);
 }
+
+// Script pour dérouler le menu en cliquant sur le bouton
+$(document).ready(function() {
+$('.menu__toggle').click(function() {
+$(this).parent().toggleClass('collapsed');
+});
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const menuNav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+  menuNav.classList.toggle('active');
+});
