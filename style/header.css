@@ -11,7 +11,7 @@ header {
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
+  padding: 0 2px;
   width: 100%;
 }
 header .header__logo img {
@@ -61,17 +61,20 @@ header nav ul.menu li a:hover {
     width: auto;
   }
   header .menu-toggle {
-    display: block;
+    display: none;
   }
   header nav ul.menu li a {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 357px) {
-  .menu-toggle__bar {
-    height: 1px;
+  header {
+    width: auto;
   }
-  nav {
+  header .menu-toggle {
+    display: block;
+  }
+  header nav {
     display: none;
   }
 }/*# sourceMappingURL=header.css.map */

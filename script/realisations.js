@@ -13,5 +13,18 @@ $(document).ready(function(){
   });
 });
 
+// Script pour dérouler le menu en cliquant sur le bouton
+$(document).ready(function() {
+$('.menu__toggle').click(function() {
+$(this).parent().toggleClass('collapsed');
+});
+});
 
+const menuToggle = document.querySelector('.menu-toggle');
+const menuNav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+  concole.console.log(siii);
+  menuNav.classList.toggle('active');
+});
 

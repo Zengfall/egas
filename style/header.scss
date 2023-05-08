@@ -17,7 +17,7 @@ header {
     align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0 20px;
+    padding: 0 2px;
     width: 100%;
 
 
@@ -78,7 +78,7 @@ header {
     header {
         width: auto;
         .menu-toggle {
-                display: block;
+                display: none;
             }
         nav {
             ul.menu {
@@ -92,10 +92,15 @@ header {
     }
 }
 @media screen and (max-width: 357px) {
-    .menu-toggle__bar {
-        height: 1px;
-    }
-    nav{
-        display: none;
+header {
+        width: auto;
+
+        .menu-toggle {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
     }
 }

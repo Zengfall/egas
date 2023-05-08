@@ -11,7 +11,7 @@ header {
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
+  padding: 0 2px;
   width: 100%;
 }
 header .header__logo img {
@@ -61,17 +61,17 @@ header nav ul.menu li a:hover {
     width: auto;
   }
   header .menu-toggle {
-    display: block;
+    display: none;
   }
   header nav ul.menu li a {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 357px) {
-  .menu-toggle__bar {
-    height: 1px;
+  .menu-toggle {
+    display: block;
   }
-  li {
+  nav {
     display: none;
   }
 }
@@ -96,10 +96,22 @@ footer p {
 section {
   margin-top: 50px;
 }
+@media screen and (max-width: 357px) {
+  section {
+    margin: auto;
+  }
+}
 section h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-left: 100px;
   padding-right: 10%;
+}
+@media screen and (max-width: 357px) {
+  section h2 {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+  }
 }
 section .realisations {
   display: flex;
@@ -113,11 +125,26 @@ section .realisations ul {
   margin-right: 50px;
   margin-left: 100px;
 }
+@media screen and (max-width: 357px) {
+  section .realisations ul {
+    display: none;
+  }
+}
 section .realisations .carrousel {
   width: 30%;
   margin-right: 200px;
   position: relative;
   height: 400px;
+}
+@media screen and (max-width: 357px) {
+  section .realisations .carrousel {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 357px) {
+  section .realisations .carrousel {
+    width: 100%;
+  }
 }
 section .realisations .carrousel img {
   width: 100%;
