@@ -68,10 +68,13 @@ header nav ul.menu li a:hover {
   }
 }
 @media screen and (max-width: 357px) {
-  .menu-toggle {
+  header {
+    width: auto;
+  }
+  header .menu-toggle {
     display: block;
   }
-  nav {
+  header nav {
     display: none;
   }
 }
