@@ -15,7 +15,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     height: 600px;
-    @media screen and (max-width: 357px){
+    @media screen and (max-width: 400px){
         background-image:url('../Images/activites/WhatsApp Image 2023-04-30 at 01.53.16.jpeg');
     }
 
@@ -90,7 +90,7 @@ body{
         margin-bottom: 30px;
         text-decoration: underline;
         margin-left: 40%;
-        @media screen and (max-width: 357px){
+        @media screen and (max-width: 400px){
             text-align: center;
             margin: 0%;
         }
@@ -133,7 +133,7 @@ body{
             @media screen and (max-width: 768px) {
                     margin-left: 30%;
                 }
-            @media screen and (max-width: 357px){
+            @media screen and (max-width: 400px){
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -216,7 +216,7 @@ body{
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
-        @media screen and (max-width: 357px) {
+        @media screen and (max-width: 400px) {
             flex-direction: column;
             margin-left: 40%;
             
@@ -230,7 +230,7 @@ body{
             width: calc(100% / 3);
             text-decoration: none;
             order:1;
-            @media screen and (max-width: 357px) {
+            @media screen and (max-width: 400px) {
                 margin-bottom: 20px;}
             .realisations__bande-image {
                 height: 150px;
@@ -280,7 +280,7 @@ body{
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
-        @media screen and (max-width: 357px){
+        @media screen and (max-width: 400px){
             flex-direction: column;
         }
 
@@ -290,14 +290,14 @@ body{
             align-items: center;
             width: calc(100% / 3);
             text-decoration: none;
-            @media screen and (max-width: 357px) {
+            @media screen and (max-width: 400px) {
                    margin-left: 32%;
                 }
 
             .partenaires__bande-image {
                 height: 150px;
                 margin-bottom: 10px;
-                @media screen and (max-width: 357px) {
+                @media screen and (max-width: 400px) {
                         .partenaires__bande-image {
                             height: 100px;
                             margin-bottom: 5px;
@@ -336,7 +336,7 @@ body{
     @media screen and (max-width: 768px){
         margin-left: -40px;
     }
-    @media screen and (max-width: 357px) {
+    @media screen and (max-width: 400px) {
              margin-left: -50px;
          }
 
@@ -418,7 +418,7 @@ body{
                 display:flex;
                 flex-direction: column;
             }
-        @media screen and (max-width: 357px){
+        @media screen and (max-width: 400px){
             flex-direction: column;
         }
 
@@ -465,7 +465,7 @@ body{
     bottom: 20px;
     right: 20px;
     display: none;
-@media screen and (max-width: 357px){
+@media screen and (max-width: 400px){
     display: none;
     margin-left: 10%;
     right: 40px;

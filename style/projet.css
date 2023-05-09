@@ -67,7 +67,7 @@ header nav ul.menu li a:hover {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   header {
     width: auto;
   }
@@ -99,7 +99,7 @@ footer p {
 section {
   margin-top: 50px;
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   section {
     margin: auto;
   }
@@ -109,7 +109,7 @@ section h2 {
   margin-left: 100px;
   padding-right: 10%;
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   section h2 {
     margin: auto;
     padding: auto;
@@ -128,7 +128,7 @@ section .projets ul {
   margin-right: 50px;
   margin-left: 100px;
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   section .projets ul {
     display: none;
   }
@@ -139,7 +139,7 @@ section .projets .carrousel {
   position: relative;
   height: 400px;
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   section .projets .carrousel {
     width: 100%;
   }

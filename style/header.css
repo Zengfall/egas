@@ -67,7 +67,7 @@ header nav ul.menu li a:hover {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 357px) {
+@media screen and (max-width: 400px) {
   header {
     width: auto;
   }

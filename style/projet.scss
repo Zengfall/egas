@@ -2,7 +2,7 @@
 @import "../style/footer.scss";
 section {
     margin-top: 50px;
-    @media screen and (max-width: 357px) {
+    @media screen and (max-width: 400px) {
             margin: auto;
         }
 
@@ -10,7 +10,7 @@ section {
         font-size: 3rem;
         margin-left: 100px;
         padding-right: 10%;
-        @media screen and (max-width: 357px) {
+        @media screen and (max-width: 400px) {
                 margin: auto;
                 padding: auto;
                 text-align: center;
@@ -30,7 +30,7 @@ section {
             font-size: 1.2rem;
             margin-right: 50px;
             margin-left: 100px;
-            @media screen and (max-width: 357px) {
+            @media screen and (max-width: 400px) {
                     display: none;
                 }
         }
@@ -40,7 +40,7 @@ section {
                     margin-right: 200px;
                     position: relative;
                     height: 400px;
-                    @media screen and (max-width: 357px) {
+                    @media screen and (max-width: 400px) {
                             width: 100%;
                         }
                     @media screen and (max-width: 768px) {
