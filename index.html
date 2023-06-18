@@ -24,25 +24,28 @@
     <div class="header__logo">
         <div>
             <!--Lien qui renvoie à l'accueil de la page-->
-            <a href="index.html"><img class="header__img" id="1" src="./Images/logo/LOGO_page-0001.webp" alt="logo Egas"></a>
+            <a href="index.html"><img class="header__img" id="1" src="./Images/logo/LOGO_page-0001.webp"
+                    alt="logo Egas"></a>
         </div>
     </div>
-    <!--Toggle-->
-    <button class="menu-toggle">
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-    </button>
-    <!--Menu-->
-    <nav>
-        <ul class="menu">
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
             <li><a href="#accueil">ACCUEIL</a></li>
             <li><a href="#apropos">À PROPOS</a></li>
             <li><a href="#activites">ACTIVITES</a></li>
             <li><a href="#realisations">REALISATIONS</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
-    </nav>
+    </div>
+
+    <a href="#" id="openBtn">
+        <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </a>
 </header>
 <main>
     <!--Section Accueil-->
@@ -208,7 +211,7 @@
             </div>
     </section>
     <a href="#" class="back-to-top"><img src="./Images/icones/icons8-flèche-haut-48.png"></a>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="./script/index.js"></script>
 </main>
 <footer>   

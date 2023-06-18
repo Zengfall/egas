@@ -17,64 +17,84 @@ header {
 header .header__logo img {
   height: 60px;
 }
-header nav ul.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-header nav ul.menu li {
-  height: 40px;
-  margin: 0 30px;
-}
-header nav ul.menu li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #333;
-  text-decoration: none;
-  font-size: 20px;
-}
-header nav ul.menu li a:hover {
-  text-decoration: underline;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.menu-toggle__bar {
-  display: block;
-  width: 20px;
-  height: 2px;
-  margin: 5px;
-  background-color: #333;
-}
-
-@media screen and (max-width: 768px) {
-  header {
-    width: auto;
-  }
-  header .menu-toggle {
-    display: none;
-  }
-  header nav ul.menu li a {
-    font-size: 12px;
-  }
-}
 @media screen and (max-width: 400px) {
-  header {
-    width: auto;
+  
+  header .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
   }
-  header .menu-toggle {
+  header .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  header .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  header .sidenav a:hover {
+    color: #111;
+  }
+  header .sidenav.active {
+    left: 0;
+  }
+  header .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  header .burger-icon {
     display: block;
   }
-  header nav {
+  header .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+@media screen and (min-width: 400px) {
+  header .sidenav .close {
     display: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  header .sidenav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  header .sidenav a:hover {
+    text-decoration: underline;
+  }
+  header .sidenav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 300px;
+  }
+  header .sidenav li {
+    height: 20px;
+    margin: 0 30px;
   }
 }/*# sourceMappingURL=header.css.map */
