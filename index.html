@@ -15,7 +15,15 @@
     <script src="https://kit.fontawesome.com/61e67503e4.js" crossorigin="anonymous"></script>
     
     <title>Accueil</title>
-
+    
+    <!--Formulaire d'envoi d'email-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("_eYVEeFPzC6Yvx24w");
+        })();
+    </script>
     
 </head>
 <body>
@@ -172,7 +180,7 @@
             <h2>CONTACTS</h2>
             <div class="left-column">
                 <h3>Nous contacter</h3>
-            <form>
+            <form id="myForm">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" pattern="[A-Za-z]{2,}" required><br>
                 <!-- Le pattern '[A-Za-z]{2,}' signifie que l'entrée doit contenir des lettres (majuscules ou minuscules) et avoir une longueur minimale de 2 caractères. -->
@@ -190,6 +198,7 @@
                 <textarea id="message" name="message" rows="4" required></textarea><br>
                 
                 <input type="submit" value="Envoyer">
+
 
             </form>
             </div>

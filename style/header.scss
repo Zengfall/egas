@@ -17,7 +17,7 @@ header {
     align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0 2px;
+    padding: 0 ;
     width: 100%;
 
 
@@ -76,6 +76,8 @@ header {
 
         .burger-icon {
             display: block;
+            margin-top: 20px;
+            margin-left: -40px;
 
 
             span {
@@ -118,12 +120,15 @@ header {
                 margin: 0;
                 padding: 0;
                 margin-left: 300px;
+                margin-top: 30px;
             }
 
             li {
                 height: 20px;
                 margin: 0 30px;
             }
+                        
         }
+        
     }
 }

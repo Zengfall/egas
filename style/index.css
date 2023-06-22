@@ -11,7 +11,7 @@ header {
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 2px;
+  padding: 0;
   width: 100%;
 }
 header .header__logo img {
@@ -59,6 +59,8 @@ header .header__logo img {
   }
   header .burger-icon {
     display: block;
+    margin-top: 20px;
+    margin-left: -40px;
   }
   header .burger-icon span {
     display: block;
@@ -94,6 +96,7 @@ header .header__logo img {
     margin: 0;
     padding: 0;
     margin-left: 300px;
+    margin-top: 30px;
   }
   header .sidenav li {
     height: 20px;
