@@ -23,32 +23,34 @@
 </head>
 
 <body>
-    <header>
-        <!--Logo cliquable -->
-        <div class="header__logo">
-            <div>
-                <!--Lien qui renvoie à l'accueil de la page-->
-                <a href="../index.html"><img class="header__img" id="1" src="../Images/logo/LOGO_page-0001.webp"
-                        alt="logo Egas"></a>
-            </div>
+<header>
+    <!--Logo cliquable -->
+    <div class="header__logo">
+        <div>
+            <!--Lien qui renvoie à l'accueil de la page-->
+            <a href="../index.html"><img class="header__img" id="1" src="../Images/logo/LOGO_page-0001.webp"
+                    alt="logo Egas"></a>
         </div>
-        <!--Toggle-->
-        <button class="menu-toggle">
-            <span class="menu-toggle__bar"></span>
-            <span class="menu-toggle__bar"></span>
-            <span class="menu-toggle__bar"></span>
-        </button>
-        <!--Menu-->
-        <nav>
-            <ul class="menu">
-                <li><a href="../index.html#accueil">ACCUEIL</a></li>
-                <li><a href="../index.html#apropos">À PROPOS</a></li>
-                <li><a href="../index.html#activites">ACTIVITES</a></li>
-                <li><a href="../html/realisations.html">REALISATIONS</a></li>
-                <li><a href="../index.html#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+            <li><a href="../index.html">ACCUEIL</a></li>
+            <li><a href="../index.html#a-propos">À PROPOS</a></li>
+            <li><a href="../index.html#activites">ACTIVITES</a></li>
+            <li><a href="../index.html#realisations">REALISATIONS</a></li>
+            <li><a href="../index.html#contact">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <a href="#" id="openBtn">
+        <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </a>
+</header>
     <main>
     <section id="Bâtiments">
         <h2>Bâtiments</h2>

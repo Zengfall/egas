@@ -16,6 +16,7 @@ header {
 }
 header .header__logo img {
   height: 60px;
+  padding: 5%;
 }
 @media screen and (max-width: 400px) {
   header {
@@ -70,40 +71,93 @@ header .header__logo img {
     margin: 6px 0;
   }
 }
-@media screen and (min-width: 400px) {
-  header .sidenav .close {
+@media screen and (min-width: 768px) {
+  .sidenav {
+    padding: 0 9px;
+    width: 90%;
+  }
+  .sidenav .close {
     display: none;
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
   }
-  header .sidenav a {
+  .sidenav a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     color: #333;
     text-decoration: none;
-    font-size: 20px;
   }
-  header .sidenav a:hover {
+}
+@media screen and (min-width: 768px) and (min-width: 993px) {
+  .sidenav a {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidenav a:hover {
     text-decoration: underline;
   }
-  header .sidenav ul {
+}
+@media screen and (min-width: 768px) {
+  .sidenav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 300px;
     margin-top: 30px;
   }
-  header .sidenav li {
+}
+@media screen and (min-width: 768px) and (min-width: 993px) {
+  .sidenav ul {
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidenav li {
+    height: 40px;
+    margin: 0 25px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .sidenav {
+    margin-left: auto;
+  }
+  .sidenav .close {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .sidenav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #333;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  .sidenav a:hover {
+    text-decoration: underline;
+  }
+  .sidenav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .sidenav li {
     height: 20px;
     margin: 0 30px;
   }
 }
-
 footer {
   background-color: #333;
   display: flex;

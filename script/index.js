@@ -40,13 +40,13 @@ function closeNav() {
   });
 
 
-//Chevron
+/*//Chevron
 const chevron = document.querySelector('.chevron ');
 
 chevron.addEventListener('click', () => {
   const activites = document.querySelector('#activites');
   activites.scrollIntoView({ behavior: 'smooth' });
-});
+});*/
 
 // Texte QSE
 

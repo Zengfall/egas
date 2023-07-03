@@ -19,12 +19,11 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0 ;
     width: 100%;
-
-
     // Logo
     .header__logo {
         img {
             height: 60px;
+            padding: 5%;
 
         }
     }
@@ -42,11 +41,13 @@ header {
             background-color: #e8e8e8;
             padding-top: 60px;
             transition: left 0.5s ease;
+            @media screen and (min-width: 768px) {}
 
             ul {
                 list-style-type: none;
                 padding: 0;
                 margin: 0;
+                @media screen and (min-width: 768px) {}
             }
 
             a {
@@ -56,6 +57,7 @@ header {
                 color: #818181;
                 display: block;
                 transition: 0.3s;
+                @media screen and (min-width: 768px) {}
 
                 &:hover {
                     color: #111;
@@ -71,6 +73,7 @@ header {
                 top: 0;
                 right: 25px;
                 font-size: 36px;
+                @media screen and (min-width: 768px) {}
             }
         }
 
@@ -78,6 +81,7 @@ header {
             display: block;
             margin-top: 20px;
             margin-left: -40px;
+            @media screen and (min-width: 768px){}
 
 
             span {
@@ -86,18 +90,27 @@ header {
                 height: 5px;
                 background-color: black;
                 margin: 6px 0;
+                @media screen and (min-width: 768px){
+
+                }
             }
         }
     }
+}
 
-    @media screen and (min-width: 400px) {
+
+
+    @media screen and (min-width: 768px) {
         .sidenav {
+            padding:0 9px;
+            width: 90%;
             .close {
                 display: none;
                 position: absolute;
                 top: 0;
                 right: 25px;
                 font-size: 36px;
+                
             }
 
             a {
@@ -107,7 +120,10 @@ header {
                 height: 100%;
                 color: #333;
                 text-decoration: none;
-                font-size: 20px;
+                @media screen and (min-width: 993px){
+                font-size: 22px;
+                }
+                
 
                 &:hover {
                     text-decoration: underline;
@@ -119,16 +135,67 @@ header {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                margin-left: 300px;
                 margin-top: 30px;
+                @media screen and (min-width: 993px) {
+                margin-left: auto;
+                    }
+                
+                
             }
 
             li {
-                height: 20px;
-                margin: 0 30px;
+                height: 40px;
+                margin: 0 25px;
             }
                         
         }
         
     }
+
+@media screen and (min-width: 993px) {
+    .sidenav {
+
+        //background-color: antiquewhite;
+        margin-left: auto;
+        .close {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #333;
+            text-decoration: none;
+            font-size: 22px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+           // margin: 0;
+            padding: 0;
+           // margin-top: 25px;
+            margin-left: auto;
+            //background-color: #111;
+            width: fit-content;
+        }
+
+        li {
+            height: 20px;
+            margin: 0 30px;
+        }
+
+    }
+
 }
