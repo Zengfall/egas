@@ -196,6 +196,11 @@ section h2 {
     text-align: center;
   }
 }
+@media screen and (max-width: 768px) {
+  section h2 {
+    text-align: center;
+  }
+}
 section .realisations {
   display: flex;
   justify-content: space-between;
@@ -213,20 +218,31 @@ section .realisations ul {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  section .realisations ul {
+    margin-left: 1%;
+    margin-top: -33%;
+  }
+}
 section .realisations .carrousel {
   width: 30%;
   margin-right: 200px;
   position: relative;
-  height: 400px;
+  height: 365px;
+  border: 3px solid chocolate;
+  padding-top: 0%;
+  margin-bottom: 1%;
 }
 @media screen and (max-width: 400px) {
   section .realisations .carrousel {
     width: 100%;
+    border: none;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 768px) {
   section .realisations .carrousel {
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;
   }
 }
 section .realisations .carrousel img {

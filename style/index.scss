@@ -93,7 +93,11 @@ body{
         margin-left: 40%;
         @media screen and (max-width: 400px){
             text-align: center;
-            margin: 0%;
+            margin: 0%;}
+        @media screen and (max-width: 768px){
+            text-align: center;
+            margin-left: -1%;
+        }
         }
     
     }
@@ -103,7 +107,8 @@ body{
         flex-wrap: wrap;
         justify-content: space-between;
         @media screen and (max-width: 768px) {
-                text-align: center;
+                flex-direction: column;
+                align-items: center;
             }
        
 
@@ -132,7 +137,7 @@ body{
             flex-basis: 45%;
             margin-left: 5%;
             @media screen and (max-width: 768px) {
-                    margin-left: 30%;
+                    margin: 2%;
                 }
             @media screen and (max-width: 400px){
                 overflow: hidden;
@@ -145,6 +150,9 @@ body{
             h3 {
                 font-size: 1.8rem;
                 margin-bottom: 20px;
+                @media screen and (max-width: 768px){
+                    text-align: center;
+                }
             }
 
             p {
@@ -153,11 +161,12 @@ body{
                 margin-bottom: 20px;
                 @media screen and (max-width: 768px) {
                         font-size: 24px;
+                        text-align: center;
                     }
             }
         }
     }
-}
+
 #activites {
     text-align: center;
     background-color: #f2f2f2;
@@ -173,6 +182,9 @@ body{
         font-size: 1.2rem;
         margin-top: 30px;
         margin-bottom: 60px;
+    @media  screen and (max-width: 768px ) {
+        font-size: 24px;
+    }    
     }
 
     .activites__bande {
@@ -201,6 +213,11 @@ body{
         &-texte {
             font-size: 1.2rem;
             font-weight: bold;
+        @media screen  and (max-width: 768px) {
+            font-size: 24px;
+            margin-left: -15%;
+            
+        }    
         }
     }
 }
@@ -448,7 +465,7 @@ body{
             margin: 10px 0;
             font-size: 1.1rem;
             @media screen and (max-width: 768px){
-                    font-size: 10px;
+                    font-size: 24px;
                     margin-top: 18px;
                 }
             @media screen and (max-width: 768px){
