@@ -183,6 +183,7 @@ body {
   margin: 50px auto;
   max-width: 600px;
   text-align: center;
+  font-size: 28px;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -284,7 +285,8 @@ body {
   }
 }
 .apropos__content .apropos__img img {
-  width: 80%;
+  width: 100%;
+  height: 400px;
   margin-left: -10%;
   border: solid;
   border-color: #fff;
@@ -292,7 +294,7 @@ body {
 .apropos__content .apropos__img .legend {
   text-align: left;
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 24px;
 }
 .apropos__content .apropos__text {
   flex-basis: 45%;
@@ -323,7 +325,7 @@ body {
   }
 }
 .apropos__content .apropos__text p {
-  font-size: 1rem;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -377,10 +379,15 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #activites .activites__bande-texte {
     font-size: 24px;
-    margin-left: -15%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #activites .activites__bande-texte {
+    font-size: 19px;
+    margin-left: 6%;
   }
 }
 
@@ -425,6 +432,11 @@ body {
 #realisations .realisations__bande-item .voir-plus {
   visibility: visible;
   color: black;
+}
+@media screen and (max-width: 400px) {
+  #realisations .realisations__bande-item .voir-plus {
+    display: none;
+  }
 }
 #realisations .realisations__bande-item:hover .realisations__bande-image {
   transform: scale(2);
