@@ -1,21 +1,24 @@
+let sidenav;
+let openBtn;
+let closeBtn;
 //Bouton basculement menu
-    document.addEventListener('DOMContentLoaded', function() {
-var sidenav = document.getElementById("mySidenav");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
+document.addEventListener('DOMContentLoaded', function() {
+  sidenav = document.getElementById("mySidenav");
+  openBtn = document.getElementById("openBtn");
+  closeBtn = document.getElementById("closeBtn");
 
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
+  openBtn.onclick = openNav;
+  closeBtn.onclick = closeNav;
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  sidenav.classList.add("active");
-}
+  /* Set the width of the side navigation to 250px */
+  function openNav() {
+    sidenav.classList.add("active");
+  }
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  sidenav.classList.remove("active")
-}
+  /* Set the width of the side navigation to 0 */
+  function closeNav() {
+    sidenav.classList.remove("active")
+  }
 });
 // Ajouter un gestionnaire d'événements sur les liens du menu pour faire défiler la page
   var menuLinks = document.querySelectorAll(".sidenav a");
