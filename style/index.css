@@ -268,6 +268,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* .apropos__button{
+   display: none;
+   @media screen and (max-width:400px){
+       display: block;
+       margin-top: 5px;
+       background: none;
+       border: none;
+       color: blue;
+       cursor: pointer;
+   }
+
+
+   }*/
 }
 @media screen and (max-width: 768px) {
   .apropos__content {
@@ -328,11 +341,11 @@ body {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
+  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .apropos__content .apropos__text p {
     font-size: 24px;
-    text-align: center;
   }
 }
 
@@ -349,8 +362,10 @@ body {
   font-size: 1.2rem;
   margin-top: 30px;
   margin-bottom: 60px;
+  text-align: justify;
+  margin: 1%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #activites .activites__description {
     font-size: 24px;
   }
