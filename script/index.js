@@ -139,10 +139,13 @@ function sendMail() {
   var params = { nom, prenom, objet, email, message };
   const serviceId = "service_vkwaujy";
   const templateId = "template_hkukxq6";
+  const templateConfirmation = "template_mgxru3q";
 
   emailjs.send(serviceId, templateId, params)
+    .then(() => {
+      return emailjs.send(serviceId, templateConfirmation, params);
+    })
     .then((res) => {
-      // Réinitialiser les champs
       document.getElementById("nom").value = "";
       document.getElementById("prenom").value = "";
       document.getElementById("objet").value = "";
@@ -164,7 +167,6 @@ function sendMail() {
       }
     });
 }
-
 
 
 
