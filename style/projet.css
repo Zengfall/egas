@@ -1,7 +1,7 @@
-body {
-  width: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  margin: 0%;
 }
 
 header {
@@ -11,22 +11,19 @@ header {
   align-items: center;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0;
+  padding: 0 15px;
   width: 100%;
 }
 header .header__logo img {
   height: 60px;
-  padding: 5%;
+  padding: 0;
 }
-@media screen and (max-width: 400px) {
-  header {
-    /* Sidenav menu */
-  }
+@media screen and (max-width: 767px) {
   header .sidenav {
     height: 100%;
     width: 250px;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: -250px;
     background-color: #e8e8e8;
@@ -60,8 +57,8 @@ header .header__logo img {
   }
   header .burger-icon {
     display: block;
-    margin-top: 20px;
-    margin-left: -40px;
+    margin: 0;
+    cursor: pointer;
   }
   header .burger-icon span {
     display: block;
@@ -71,67 +68,27 @@ header .header__logo img {
     margin: 6px 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   .sidenav {
     padding: 0 9px;
-    width: 90%;
+    width: auto;
+    margin-left: auto;
   }
   .sidenav .close {
     display: none;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
   }
-  .sidenav a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #333;
-    text-decoration: none;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 993px) {
-  .sidenav a {
-    font-size: 22px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidenav a:hover {
-    text-decoration: underline;
-  }
-}
-@media screen and (min-width: 768px) {
   .sidenav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 30px;
+    align-items: center;
+    gap: 20px;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 993px) {
-  .sidenav ul {
-    margin-left: auto;
-  }
-}
-@media screen and (min-width: 768px) {
   .sidenav li {
     height: 40px;
-    margin: 0 25px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .sidenav {
-    margin-left: auto;
-  }
-  .sidenav .close {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
+    margin: 0;
   }
   .sidenav a {
     display: flex;
@@ -140,22 +97,22 @@ header .header__logo img {
     height: 100%;
     color: #333;
     text-decoration: none;
-    font-size: 22px;
   }
   .sidenav a:hover {
     text-decoration: underline;
   }
+}
+@media screen and (min-width: 993px) {
+  .sidenav a {
+    font-size: 22px;
+  }
   .sidenav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
     margin-left: auto;
     width: -moz-fit-content;
     width: fit-content;
   }
   .sidenav li {
-    height: 20px;
-    margin: 0 30px;
+    margin: 0 10px;
   }
 }
 footer {
@@ -165,6 +122,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  padding: 20px 15px;
 }
 footer img {
   display: block;
@@ -174,27 +132,17 @@ footer img {
 footer p {
   text-align: center;
   color: white;
+  margin: 10px 0 0;
 }
 
 section {
   margin-top: 50px;
-}
-@media screen and (max-width: 400px) {
-  section {
-    margin: auto;
-  }
+  padding: 0 15px;
 }
 section h2 {
   font-size: 3rem;
   margin-left: 100px;
   padding-right: 10%;
-}
-@media screen and (max-width: 400px) {
-  section h2 {
-    margin: auto;
-    padding: auto;
-    text-align: center;
-  }
 }
 section .projets {
   display: flex;
@@ -208,27 +156,11 @@ section .projets ul {
   margin-right: 50px;
   margin-left: 100px;
 }
-@media screen and (max-width: 400px) {
-  section .projets ul {
-    display: none;
-  }
-}
 section .projets .carrousel {
   width: 30%;
   margin-right: 200px;
   position: relative;
   height: 400px;
-}
-@media screen and (max-width: 400px) {
-  section .projets .carrousel {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  section .projets .carrousel {
-    width: 50%;
-    margin-right: 30px;
-  }
 }
 section .projets .carrousel img {
   width: 100%;
@@ -253,10 +185,14 @@ section .projets .carrousel .fa.right {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    margin-top: 30px;
+  }
   section h2 {
     font-size: 2rem;
-    margin-left: 50px;
-    padding-right: 5%;
+    margin-left: 0;
+    padding-right: 0;
+    text-align: center;
   }
   section .projets {
     flex-direction: column;
@@ -278,7 +214,34 @@ section .projets .carrousel .fa.right {
   }
   section .projets ul {
     margin-right: 0;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 10px;
   }
-}/*# sourceMappingURL=projet.css.map */
+}
+@media screen and (max-width: 400px) {
+  section .projets ul {
+    display: none;
+  }
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* caché par défaut */
+  transition: bottom 0.3s ease;
+}
+
+/* Visible uniquement sur écrans > 400px via JS */
+@media screen and (min-width: 401px) {
+  .show-back-to-top {
+    display: block;
+  }
+}
+
+/* Sur mobile, toujours caché, même avec la classe JS */
+@media screen and (max-width: 400px) {
+  .back-to-top {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=projet.css.map */

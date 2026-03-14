@@ -1,112 +1,104 @@
-@import "../style/header.scss";
-@import "../style/footer.scss";
+@use "header";
+@use "footer";
 section {
-    margin-top: 50px;
-    @media screen and (max-width: 400px) {
-            margin: auto;
+  margin-top: 50px;
+  padding: 0 15px;
+
+  h2 {
+    font-size: 3rem;
+    margin-left: 100px;
+    padding-right: 10%;
+  }
+
+  .projets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    ul {
+      list-style-type: disc;
+      font-size: 1.2rem;
+      margin-right: 50px;
+      margin-left: 100px;
+    }
+
+    .carrousel {
+      width: 30%;
+      margin-right: 200px;
+      position: relative;
+      height: 400px;
+
+      img {
+        width: 100%;
+        height: 400px;
+        margin-top: -40px;
+        object-fit: cover;
+      }
+
+      .fa {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+
+        &.left {
+          left: 0;
         }
 
+        &.right {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-top: 30px;
+
     h2 {
-        font-size: 3rem;
-        margin-left: 100px;
-        padding-right: 10%;
-        @media screen and (max-width: 400px) {
-                margin: auto;
-                padding: auto;
-                text-align: center;
-            }
-      
-        
+      font-size: 2rem;
+      margin-left: 0;
+      padding-right: 0;
+      text-align: center;
     }
 
     .projets {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
 
-        ul {
-            list-style-type: disc;
-            font-size: 1.2rem;
-            margin-right: 50px;
-            margin-left: 100px;
-            @media screen and (max-width: 400px) {
-                    display: none;
-                }
+      .carrousel {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 300px;
+
+        img {
+          height: 300px;
+          margin-top: 0;
         }
 
-                .carrousel {
-                    width: 30%;
-                    margin-right: 200px;
-                    position: relative;
-                    height: 400px;
-                    @media screen and (max-width: 400px) {
-                            width: 100%;
-                        }
-                    @media screen and (max-width: 768px) {
-                            width: 50%;
-                            margin-right: 30px;
-                        }
-        
-                    img {
-                        width: 100%;
-                        height: 400px;
-                        margin-top: -40px;
-                        object-fit: cover;
-                    }
-        
-                    .fa {
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        color: #fff;
-                        font-size: 24px;
-                        cursor: pointer;
-        
-                        &.left {
-                            left: 0;
-                        }
-        
-                        &.right {
-                            right: 0;
-                        }
-                    }
-                }
-}}
-@media screen and (max-width: 768px) {
-    section {
-        h2 {
-            font-size: 2rem;
-            margin-left: 50px;
-            padding-right: 5%;
+        .fa {
+          font-size: 20px;
         }
+      }
 
-        .projets {
-            flex-direction: column;
-            align-items: flex-start;
-            margin-top: 10px;
-
-            .carrousel {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 20px;
-                height: 300px;
-
-                img {
-                    height: 300px;
-                    margin-top: 0;
-                }
-
-                .fa {
-                    font-size: 20px;
-                }
-            }
-
-            ul {
-                margin-right: 0;
-                margin-left: 50px;
-                margin-bottom: 10px;
-            }
-        }
+      ul {
+        margin-right: 0;
+        margin-left: 20px;
+        margin-bottom: 10px;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section .projets ul {
+    display: none;
+  }
 }

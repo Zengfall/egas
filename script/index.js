@@ -87,47 +87,83 @@ backToTopButton.addEventListener("click", backToTop);
 function backToTop() {
   window.scrollTo(0, 0);
 }
-//Formulaire de contact
 
+//Pour que Le bouton reste au-dessus du footer
+backToTopButton.addEventListener("click", backToTop);
+
+function backToTop() {
+  window.scrollTo(0, 0);
+}
+const footer = document.querySelector("footer");
+
+window.addEventListener("scroll", function () {
+
+  const footerPosition = footer.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (footerPosition < screenHeight) {
+    backToTopButton.style.bottom = "65px";
+  } else {
+    backToTopButton.style.bottom = "20px";
+  }
+
+});
+// Formulaire de contact
 function sendMail() {
-  var params ={
-   nom : document.getElementById("nom").value,
-   prenom : document.getElementById("prenom").value,
-   objet : document.getElementById("objet").value,
-   email : document.getElementById("email").value,
-   message : document.getElementById("message").value,
-   };
+  var nom = document.getElementById("nom").value.trim();
+  var prenom = document.getElementById("prenom").value.trim();
+  var objet = document.getElementById("objet").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var message = document.getElementById("message").value.trim();
 
-  const serviceId="service_vkwaujy";
-  const templateId="template_hkukxq6"; 
+  // Validation des champs vides
+  if (!nom || !prenom || !objet || !email || !message) {
+    alert("Veuillez remplir tous les champs obligatoires.");
+    return;
+  }
+
+  // Validation du format email
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Veuillez entrer une adresse email valide.");
+    return;
+  }
+
+  // Désactiver le bouton pendant l'envoi
+  var submitBtn = document.querySelector('#myForm button[type="submit"]');
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Envoi en cours...";
+  }
+
+  var params = { nom, prenom, objet, email, message };
+  const serviceId = "service_vkwaujy";
+  const templateId = "template_hkukxq6";
 
   emailjs.send(serviceId, templateId, params)
-  .then((res) => {
-    document.getElementById("nom").value = "";
-    document.getElementById("prenom").value = "";
-    document.getElementById("objet").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-    console.log(res);
-    alert("Votre message a été envoyé avec succés");
-  })
-  .catch((err)=>console.log(err));
+    .then((res) => {
+      // Réinitialiser les champs
+      document.getElementById("nom").value = "";
+      document.getElementById("prenom").value = "";
+      document.getElementById("objet").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Votre message a été envoyé avec succès !");
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Envoyer";
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("Une erreur est survenue, veuillez réessayer.");
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Envoyer";
+      }
+    });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Ciblez le formulaire
-  var form = document.getElementById('myForm');
-
-  // Ajoutez un écouteur d'événement pour l'événement "submit"
-  form.addEventListener('submit', function(event) {
-    // Empêchez le comportement par défaut du formulaire
-    event.preventDefault();
-
-    // Appelez la fonction sendMail()
-    sendMail();
-  });
-});
-
 
 
 

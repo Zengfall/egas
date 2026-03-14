@@ -1,7 +1,6 @@
-@import "../style/header.scss";
-// Variables
-$header-height: 80px;
-$menu-item-height: 40px;
+@use "header";
+@use "footer";
+
 body{
     width: 100%;
     overflow-x: hidden;
@@ -524,23 +523,4 @@ body{
 
 .show-back-to-top {
     display: block;
-}
-footer {
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-
-    img {
-        display: block;
-        margin: 0 auto;
-        height: 70px;
-    }
-
-    p {
-        text-align: center;
-        color: white;
-    }
 }

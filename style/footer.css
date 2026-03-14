@@ -5,6 +5,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  padding: 20px 15px;
 }
 footer img {
   display: block;
@@ -14,4 +15,5 @@ footer img {
 footer p {
   text-align: center;
   color: white;
+  margin: 10px 0 0;
 }/*# sourceMappingURL=footer.css.map */
