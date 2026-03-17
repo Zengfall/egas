@@ -23,24 +23,22 @@ document.addEventListener('DOMContentLoaded', function() {
 // Ajouter un gestionnaire d'événements sur les liens du menu pour faire défiler la page
   var menuLinks = document.querySelectorAll(".sidenav a");
   menuLinks.forEach(function(link) {
-    link.addEventListener("click", function(event) {
-      event.preventDefault(); // Empêcher la redirection par défaut
+  link.addEventListener("click", function(event) {
+    var href = link.getAttribute("href");
 
-      // Récupérer l'identifiant de la partie cible
-      var targetId = link.getAttribute("href").substring(1);
+    // Extraire uniquement l'ancre (#apropos, #contact, etc.)
+    var hash = href.includes("#") ? href.substring(href.indexOf("#") + 1) : null;
+    var targetElement = hash ? document.getElementById(hash) : null;
 
-      // Trouver l'élément cible dans le document
-      var targetElement = document.getElementById(targetId);
-
-      // Faire défiler la page jusqu'à l'élément cible
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-
-      // Fermer le menu après le clic sur un lien
+    // Scroll uniquement si l'élément existe sur cette page
+    if (targetElement) {
+      event.preventDefault();
+      targetElement.scrollIntoView({ behavior: "smooth" });
       sidenav.classList.remove("active");
-    });
+    }
+    // Sinon, laisser le navigateur suivre le lien normalement
   });
+});
 
 
 /*//Chevron
