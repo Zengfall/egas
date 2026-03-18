@@ -215,13 +215,10 @@ section .projets .carrousel .fa.right {
   }
   section .projets ul {
     margin-right: 0;
-    margin-left: 20px;
+    margin-left: 1px;
     margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 400px) {
-  section .projets ul {
-    display: none;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 .back-to-top {
