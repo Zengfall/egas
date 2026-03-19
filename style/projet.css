@@ -15,6 +15,34 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
+/* Tagline header */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__tagline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid #333;
+    padding-left: 12px;
+    line-height: 1.4;
+}
+
+.header__tagline span {
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Masqué sur mobile pour ne pas écraser le header */
+@media screen and (max-width: 480px) {
+    .header__tagline {
+        display: none;
+    }
+}
 header .header__logo img {
   height: 60px;
   padding: 0;

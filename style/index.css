@@ -20,6 +20,34 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
+/* Tagline header */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__tagline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid #333;
+    padding-left: 12px;
+    line-height: 1.4;
+}
+
+.header__tagline span {
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Masqué sur mobile pour ne pas écraser le header */
+@media screen and (max-width: 480px) {
+    .header__tagline {
+        display: none;
+    }
+}
 
 header .header__logo img {
   height: 60px;
@@ -171,12 +199,13 @@ footer p {
   margin: 50px auto;
   max-width: 600px;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 @media screen and (max-width: 768px) {
   #accueil .presentation {
@@ -568,6 +597,47 @@ footer p {
 }
 
 /* SECTION CONTACT */
+
+/* Intro section contact */
+.contact-intro {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-left: 5px solid #333;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+/* Tablette */
+@media screen and (max-width: 768px) {
+    .contact-intro {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact-intro p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 400px) {
+    .contact-intro {
+        padding: 12px 15px;
+        border-left-width: 3px;
+    }
+
+    .contact-intro p {
+        font-size: 0.95rem;
+    }
+}
 
 #contact {
   padding: 80px 20px;
