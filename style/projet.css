@@ -212,6 +212,108 @@ footer p {
         padding: 6px 10px;
     }
 }
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox figcaption {
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 15px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.lightbox .lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lightbox .lightbox__close:hover {
+    color: #ccc;
+}
+
+.lightbox .lightbox__prev,
+.lightbox .lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    user-select: none;
+}
+
+.lightbox .lightbox__prev:hover,
+.lightbox .lightbox__next:hover {
+    color: #ccc;
+}
+
+.lightbox .lightbox__prev {
+    left: 10px;
+}
+
+.lightbox .lightbox__next {
+    right: 10px;
+}
+
+.lightbox .lightbox__counter {
+    position: absolute;
+    bottom: 20px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Curseur pointer sur les photos du carrousel */
+.carrousel figure {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .lightbox .lightbox__prev,
+    .lightbox .lightbox__next {
+        font-size: 1.8rem;
+        padding: 10px;
+    }
+
+    .lightbox .lightbox__close {
+        font-size: 2rem;
+        top: 15px;
+        right: 20px;
+    }
+
+    .lightbox figcaption {
+        font-size: 0.9rem;
+    }
+}
 section {
   margin-top: 50px;
   padding: 0 15px;
