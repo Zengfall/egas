@@ -185,6 +185,33 @@ footer p {
   margin: 10px 0 0;
 }
 
+
+/* Légendes carrousel */
+.carrousel figure {
+    position: relative;
+    margin: 0;
+}
+
+.carrousel figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 8px 12px;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .carrousel figcaption {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
 section {
   margin-top: 50px;
   padding: 0 15px;
