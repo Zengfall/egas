@@ -135,6 +135,55 @@ footer p {
   color: white;
   margin: 10px 0 0;
 }
+/* Chapeau introductif */
+.page-intro {
+    background-color: #f5f5f5;
+    border-left: 5px solid #333;
+    padding: 30px 100px;
+    margin-top: 40px;
+}
+
+.page-intro h1 {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+.page-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 750px;
+    margin: 0;
+}
+
+/* Responsive tablette */
+@media screen and (max-width: 768px) {
+    .page-intro {
+        padding: 20px 20px;
+        margin-top: 25px;
+    }
+
+    .page-intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-intro p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 400px) {
+    .page-intro {
+        padding: 15px;
+        border-left-width: 3px;
+    }
+
+    .page-intro h1 {
+        font-size: 1.5rem;
+    }
+}
 
 section {
   margin-top: 50px;
