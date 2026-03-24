@@ -1,4 +1,15 @@
-
+/*=====================
+   VARIABLES COULEURS EGAS
+   ===================== */
+:root {
+    --orange:     #E8752A;
+    --vert:       #3DC40A;
+    --noir:       #1A1A1A;
+    --fond-clair: #F5F5F5;
+    --blanc:      #FFFFFF;
+    --texte:      #333333;
+    --texte-doux: #555555;
+}
 
 html, body {
   margin: 0;
@@ -136,6 +147,7 @@ header .header__logo img {
   }
   .sidenav a:hover {
     text-decoration: underline;
+    color: #3DC40A;
   }
 }
 
@@ -303,7 +315,7 @@ footer p {
   height: 400px;
   margin-left: -10%;
   border: solid;
-  border-color: #fff;
+  border-color: #E8752A;
 }
 
 .apropos__content .apropos__img .legend {
@@ -391,7 +403,7 @@ footer p {
 }
 
 .activites__bande-item:hover {
-  color: green;
+  color: #E8752A;
 }
 
 .activites__bande-icon {

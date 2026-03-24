@@ -130,6 +130,7 @@ header .header__logo img {
   }
   .sidenav a:hover {
     text-decoration: underline;
+    color: #E8752A;
   }
 }
 @media screen and (min-width: 993px) {
