@@ -51,17 +51,27 @@ chevron.addEventListener('click', () => {
 
 // Texte QSE
 
-  const qseImage = document.getElementById("qse-image");
-  const qseTexte = document.querySelector(".qse-texte");
-  const qseTexteClose = document.querySelector(".qse-texte-close");
+  // Texte QSE
+document.addEventListener('DOMContentLoaded', function() {
+    const qseImage = document.getElementById("qse-image");
+    const qseTexte = document.querySelector(".qse-texte");
+    const qseTexteClose = document.querySelector(".qse-texte-close");
 
-  qseImage.addEventListener("click", () => {
-    qseTexte.style.display = "block";
-  });
+    qseImage.addEventListener("click", () => {
+        qseTexte.style.display = "block";
+    });
 
-  qseTexteClose.addEventListener("click", () => {
-    qseTexte.style.display = "none";
-  });
+    qseTexteClose.addEventListener("click", () => {
+        qseTexte.style.display = "none";
+    });
+
+    // Fermeture aussi en cliquant sur le fond noir
+    qseTexte.addEventListener("click", (e) => {
+        if (e.target === qseTexte) {
+            qseTexte.style.display = "none";
+        }
+    });
+});
 
  //Bouton back-to-top
 var backToTopButton = document.querySelector(".back-to-top");
