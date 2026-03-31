@@ -1,189 +1,323 @@
+/*HEADER*/
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+header .header__logo img {
+  height: 60px;
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  header .sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  header .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  header .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  header .sidenav a:hover {
+    color: #111;
+  }
+  header .sidenav.active {
+    left: 0;
+  }
+  header .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  header .burger-icon {
+    display: block;
+    margin: 0;
+    cursor: pointer;
+  }
+  header .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #333;
+  padding-left: 12px;
+  line-height: 1.4;
+}
+.header__tagline span {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+}
+@media screen and (max-width: 480px) {
+  .header__tagline {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidenav {
+    padding: 0 9px;
+    width: auto;
+    margin-left: auto;
+  }
+  .sidenav .close {
+    display: none;
+  }
+  .sidenav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+  }
+  .sidenav li {
+    height: 40px;
+    margin: 0;
+  }
+  .sidenav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #333;
+    text-decoration: none;
+  }
+  .sidenav a:hover {
+    text-decoration: underline;
+    color: #3DC40A;
+  }
+}
+@media screen and (min-width: 993px) {
+  .sidenav a {
+    font-size: 22px;
+  }
+  .sidenav ul {
+    margin-left: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .sidenav li {
+    margin: 0 10px;
+  }
+}
+footer {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 15px;
+}
+footer img {
+  display: block;
+  margin: 0 auto;
+  height: 70px;
+}
+footer p {
+  text-align: center;
+  color: white;
+  margin: 10px 0 0;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  
 }
 
-
-
-/* Chapeau introductif */
 .page-intro {
-    background-color: #f5f5f5;
-    border-left: 5px solid #333;
-    padding: 30px 100px;
-    margin-top: 40px;
+  background-color: #f5f5f5;
+  border-left: 5px solid #333;
+  padding: 30px 100px;
+  margin-top: 40px;
 }
-
 .page-intro h1 {
-    font-size: 2.5rem;
-    margin: 0 0 15px 0;
-    color: #333;
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+  color: #333;
 }
-
 .page-intro p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555;
-    max-width: 750px;
-    margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 750px;
+  margin: 0;
 }
-
-/* Responsive tablette */
 @media screen and (max-width: 768px) {
-    .page-intro {
-        padding: 20px 20px;
-        margin-top: 25px;
-    }
-
-    .page-intro h1 {
-        font-size: 1.8rem;
-    }
-
-    .page-intro p {
-        font-size: 1rem;
-    }
-}
-
-/* Responsive mobile */
-@media screen and (max-width: 400px) {
-    .page-intro {
-        padding: 15px;
-        border-left-width: 3px;
-    }
-
-    .page-intro h1 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Légendes carrousel */
-.carrousel figure {
-    position: relative;
-    margin: 0;
-}
-
-.carrousel figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    font-size: 0.95rem;
-    text-align: center;
-    padding: 8px 12px;
-    box-sizing: border-box;
-}
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.lightbox.active {
-    display: flex;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: 4px;
-}
-
-.lightbox figcaption {
-    color: #fff;
+  .page-intro {
+    padding: 20px 20px;
+    margin-top: 25px;
+  }
+  .page-intro h1 {
+    font-size: 1.8rem;
+  }
+  .page-intro p {
     font-size: 1rem;
-    margin-top: 15px;
-    text-align: center;
-    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .page-intro {
+    padding: 15px;
+    border-left-width: 3px;
+  }
+  .page-intro h1 {
+    font-size: 1.5rem;
+  }
 }
 
+.carrousel figure {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+.carrousel figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .carrousel figcaption {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 4px;
+}
+.lightbox figcaption {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 15px;
+  text-align: center;
+  padding: 0 20px;
+}
+@media screen and (max-width: 768px) {
+  .lightbox figcaption {
+    font-size: 0.9rem;
+  }
+}
 .lightbox .lightbox__close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2.5rem;
-    color: #fff;
-    cursor: pointer;
-    line-height: 1;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
 }
-
 .lightbox .lightbox__close:hover {
-    color: #ccc;
+  color: #ccc;
 }
-
+@media screen and (max-width: 768px) {
+  .lightbox .lightbox__close {
+    font-size: 2rem;
+    top: 15px;
+    right: 20px;
+  }
+}
 .lightbox .lightbox__prev,
 .lightbox .lightbox__next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2.5rem;
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 20px;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-
 .lightbox .lightbox__prev:hover,
 .lightbox .lightbox__next:hover {
-    color: #ccc;
+  color: #ccc;
 }
-
+@media screen and (max-width: 768px) {
+  .lightbox .lightbox__prev,
+  .lightbox .lightbox__next {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+}
 .lightbox .lightbox__prev {
-    left: 10px;
+  left: 10px;
 }
-
 .lightbox .lightbox__next {
-    right: 10px;
+  right: 10px;
 }
-
 .lightbox .lightbox__counter {
-    position: absolute;
-    bottom: 20px;
-    color: #ccc;
-    font-size: 0.9rem;
+  position: absolute;
+  bottom: 20px;
+  color: #ccc;
+  font-size: 0.9rem;
 }
 
-/* Curseur pointer sur les photos du carrousel */
-.carrousel figure {
-    cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .lightbox .lightbox__prev,
-    .lightbox .lightbox__next {
-        font-size: 1.8rem;
-        padding: 10px;
-    }
-
-    .lightbox .lightbox__close {
-        font-size: 2rem;
-        top: 15px;
-        right: 20px;
-    }
-
-    .lightbox figcaption {
-        font-size: 0.9rem;
-    }
-}
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .carrousel figcaption {
-        font-size: 0.85rem;
-        padding: 6px 10px;
-    }
-}
 section {
   margin-top: 50px;
   padding: 0 15px;
@@ -232,7 +366,6 @@ section .realisations .carrousel .fa.left {
 section .realisations .carrousel .fa.right {
   right: 0;
 }
-
 @media screen and (max-width: 768px) {
   section {
     margin-top: 30px;
@@ -262,56 +395,32 @@ section .realisations .carrousel .fa.right {
     font-size: 20px;
   }
   section .realisations ul {
-  margin-right: 0;
-  margin-left: 1px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none; /* caché par défaut */
-  transition: bottom 0.3s ease;
-}
-
-/* Visible uniquement sur écrans > 400px via JS */
-@media screen and (min-width: 401px) {
-  .show-back-to-top {
-    display: none;
+    margin-right: 0;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
-/* Sur mobile, toujours caché, même avec la classe JS */
-@media screen and (max-width: 400px) {
-  .back-to-top {
-    display: none !important;
-  }
-}
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: none;
+  transition: bottom 0.3s ease;
 }
-@media screen and (max-width: 400px) {
-  .back-to-top {
-    display: none;
-    margin-left: 10%;
-    right: 40px;
-    visibility: hidden;
-  }
-}
-
 .back-to-top:hover {
   text-decoration: none;
 }
 
-.show-back-to-top {
-  display: block;
+@media screen and (min-width: 401px) {
+  .show-back-to-top {
+    display: block;
+  }
 }
-
-/*# sourceMappingURL=realisations.css.map */
+@media screen and (max-width: 400px) {
+  .back-to-top {
+    display: none !important;
+  }
+}/*# sourceMappingURL=realisations.css.map */

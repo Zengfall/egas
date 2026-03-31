@@ -1,6 +1,7 @@
 $header-height: 80px;
 $menu-item-height: 40px;
 
+/*HEADER*/
 header {
   height: $header-height;
   display: flex;
@@ -10,6 +11,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 15px;
   width: 100%;
+  box-sizing: border-box;
 
   .header__logo img {
     height: 60px;
@@ -75,6 +77,32 @@ header {
   }
 }
 
+// Tagline à côté du logo
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #333;
+  padding-left: 12px;
+  line-height: 1.4;
+
+  span {
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .sidenav {
     padding: 0 9px;
@@ -109,6 +137,7 @@ header {
 
       &:hover {
         text-decoration: underline;
+        color: #3DC40A;
       }
     }
   }
@@ -119,10 +148,12 @@ header {
     a {
       font-size: 22px;
     }
+
     ul {
       margin-left: auto;
       width: fit-content;
     }
+
     li {
       margin: 0 10px;
     }
