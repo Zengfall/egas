@@ -1,3 +1,4 @@
+/*Footer*/
 footer {
   background-color: #333;
   display: flex;
@@ -16,4 +17,4 @@ footer p {
   text-align: center;
   color: white;
   margin: 10px 0 0;
-}/*# sourceMappingURL=footer.css.map */
+}
